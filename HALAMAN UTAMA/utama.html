@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="utama.css">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Adilla Ruby Kasyafani</a>
+
+        <nav class="navbar" id="navbar">
+            <a href="/HALAMAN WEBSITE/website.html">Website</a>
+            <a href="/HALAMAN ABOUT/About.html">About</a>
+            <a href="/HALAMAN SERTIFIKAT/sertifikat.html">Sertifikat</a>
+        </nav>    
+
+        <div class="burger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="bg-slide">
+            <div class="content-text">
+                <div class="place">
+                    <h1><span class="span1">WELCOME</span> TO MY WEBSITE</h1>
+                </div>
+        
+                <div class="tittle">
+                    <h2 class="text-animation">PROGRAMMER</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <span class="line"></span>
+
+    <script>
+        function toggleMenu() {
+            var navbar = document.getElementById("navbar");
+            navbar.classList.toggle("open");
+        }
+    </script>
+</body>
+</html>

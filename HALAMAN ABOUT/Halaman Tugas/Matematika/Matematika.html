@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Matematika</title>
+    <link rel="stylesheet" href="Matematika.css">
+</head>
+<body>
+
+    <!-- Menu Burger -->
+    <div class="burger-menu" id="burger-menu">
+        <div class="burger-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="menu" id="menu">
+            <ul>
+                <li><a href="/HALAMAN ABOUT/Halaman Tugas/Matematika/Matematika.html">Matematika</a></li>
+                <li><a href="#" onclick="showCalculator()">Kalkulator</a></li>
+                <li><a href="#" onclick="showArithmetic()">Barisan Deret Aritmatika</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Tugas Matematika di Tengah -->
+    <div class="content">
+        <h1>Tugas Matematika</h1>
+        <p>Di bawah ini, Anda bisa memilih antara Kalkulator atau menghitung Barisan Deret Aritmatika.</p>
+
+        <!-- Kalkulator -->
+        <div class="calculator" id="calculator" style="display:none;">
+            <input type="text" id="display" disabled>
+            <div class="buttons">
+                <button class="btn" onclick="appendToDisplay('1')">1</button>
+                <button class="btn" onclick="appendToDisplay('2')">2</button>
+                <button class="btn" onclick="appendToDisplay('3')">3</button>
+                <button class="btn" onclick="appendToDisplay('+')">+</button>
+                <button class="btn" onclick="appendToDisplay('4')">4</button>
+                <button class="btn" onclick="appendToDisplay('5')">5</button>
+                <button class="btn" onclick="appendToDisplay('6')">6</button>
+                <button class="btn" onclick="appendToDisplay('-')">-</button>
+                <button class="btn" onclick="appendToDisplay('7')">7</button>
+                <button class="btn" onclick="appendToDisplay('8')">8</button>
+                <button class="btn" onclick="appendToDisplay('9')">9</button>
+                <button class="btn" onclick="appendToDisplay('*')">*</button>
+                <button class="btn" onclick="appendToDisplay('0')">0</button>
+                <button class="btn" onclick="clearDisplay()">C</button>
+                <button class="btn" onclick="appendToDisplay('.')">.</button>
+                <button class="btn" onclick="appendToDisplay('/')">/</button>
+                <button class="btn" onclick="appendToDisplay('(')">(</button>
+                <button class="btn" onclick="appendToDisplay(')')">)</button>
+                <button class="btn" onclick="appendToDisplay('**')">^</button>
+                <button class="btn" onclick="appendToDisplay('%')">%</button>
+                <button class="btn" onclick="appendToDisplay('Math.sqrt(')">√</button>
+                <button class="btn" onclick="appendToDisplay('Math.PI')">π</button>
+                <button class="btn" onclick="appendToDisplay('Math.E')">e</button>
+                <button class="btn" onclick="appendToDisplay('Math.sin(')">sin</button>
+                <button class="btn" onclick="appendToDisplay('Math.cos(')">cos</button>
+                <button class="btn" onclick="appendToDisplay('Math.tan(')">tan</button>
+                <button class="btn" onclick="memoryClear()">MC</button>
+                <button class="btn" onclick="memoryRecall()">MR</button>
+                <button class="btn" onclick="memoryAdd()">M+</button>
+                <button class="btn" onclick="memorySubtract()">M-</button>
+                <button class="btn equal" onclick="calculate()">=</button>
+            </div>
+        </div>
+
+        <!-- Barisan Deret Aritmatika -->
+        <div class="arithmetic" id="arithmetic" style="display:none;">
+            <h2>Barisan Deret Aritmatika</h2>
+            <form onsubmit="calculateArithmetic(event)">
+                <label for="first-term">Suku Pertama:</label>
+                <input type="number" id="first-term" required>
+                <label for="common-diff">Beda:</label>
+                <input type="number" id="common-diff" required>
+                <label for="num-terms">Jumlah Suku:</label>
+                <input type="number" id="num-terms" required>
+                <button type="submit">Hitung</button>
+            </form>
+            <div id="result-arithmetic"></div>
+        </div>
+    </div>
+
+    <script src="Matematika.js"></script>
+</body>
+</html>

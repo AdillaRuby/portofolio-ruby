@@ -1,0 +1,250 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #121212;
+}
+
+p, a, h1 {
+    color: white;
+}
+
+/* header */
+
+header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+header .navbar {
+    display: flex;
+    justify-content: right;
+    background-color: #121212;
+    height: 5rem;
+    padding: 20px 40px;
+    border-bottom: 1px solid white;
+}
+
+header .navbar ul {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+header .navbar ul li {
+    display: inline-block;
+    margin-right: 4rem;
+}
+
+header .navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 500;
+    transition: all;
+    transition-duration: 100ms;
+}
+
+header .navbar ul li a:hover {
+    color: white;
+    border-bottom: 3px solid green;
+}
+
+/* judul */
+
+.judul {
+    margin: 3rem 0 3rem;
+    width: 100%;
+    font-weight: 700;
+}
+
+.judul h1 {
+    font-size: 5rem;
+}
+
+/* daftar isi */
+
+.daftar-artikel {
+    display: flex;
+    width: 33%;
+    margin-left: 3rem;
+    border-radius: 10px;
+}
+
+.daftar-artikel h1 {
+    font-size: 1.5rem;
+}
+
+.daftar-artikel ol li {
+    text-align: left;
+    color: white;
+}
+
+.daftar-artikel ol li a {
+    text-decoration: none;
+    color: white;
+}
+
+.daftar-artikel ol li a:hover {
+    font-weight: bold;
+}
+
+/* akhir dari header */
+
+
+/* Main */
+/* section blog */
+
+section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 3rem;
+}
+
+/* artikel kiri */
+.artikel-kiri {
+    height: 650px;
+    margin: 0 3rem 0;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.judul-artikel {
+    font-size: 2.5rem;
+    padding: 1rem 0 1.5rem;
+}
+
+.artikel-kiri img {
+    width: 100%;
+    height: 300px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.isi-artikel {
+    padding: 1rem 0 1.5rem;
+}
+
+.isi-artikel p {
+    font-size: 1.5rem;
+}
+.artikel-kiri h5 {
+    color: rgb(50, 70, 70);
+    font-size: .8rem;
+}
+
+/* artikel kanan */
+
+.flex1 {
+    display: flex;
+    flex: 1;
+    flex-flow: row;
+    margin-bottom: 2rem;
+}
+
+.gambar-artikel img {
+    width: 300px;
+    height: 200px;
+    border-radius: 20px;
+}
+
+.artikel-info {
+    padding: 1rem;
+}   
+
+.artikel-info h5 {
+    color: rgb(50, 70, 70);
+}
+/* akhir dari main dan section */
+
+/* footer */
+
+footer {
+    height: 100px;
+    background-color: #121212;
+    border-top: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    padding: 20px;
+}
+
+/* end of footer */
+
+/* responSIF */
+
+@media screen and (max-width: 1000px) {
+    header .navbar {
+        justify-content: center;
+    }
+
+    .judul h1 {
+        font-size: 4rem;
+    }
+
+    section .artikel-kiri {
+        display: flex;
+        order: -1;
+        flex-direction: column;
+        overflow: unset;
+    }
+}
+
+@media screen and (max-width: 875px) {
+    section {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .artikel-kiri {
+        display: block;
+        order: -1;
+    }
+
+    .artikel-kanan {
+        display: block;
+        order: 0;
+    }
+
+    .judul h1 {
+        font-size: 3rem;
+    }
+
+    .daftar-artikel {
+        justify-self: center;
+    }
+
+    .isi-artikel p {
+        font-size: 1.3rem;
+    }
+
+    section p {
+        font-size: 1rem;
+    }
+
+    .judul-artikel {
+        font-size: 2rem;
+    }
+
+    .artikel-kanan {
+        margin-left: 3rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .artikel-kanan{
+        flex: 0;
+        display: flex;
+        flex-direction: column;
+    }
+}

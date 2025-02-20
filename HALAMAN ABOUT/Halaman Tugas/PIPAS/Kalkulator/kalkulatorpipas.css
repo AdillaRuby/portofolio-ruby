@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url(carbo.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #121371;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 0 20px white; /* Efek glow */
+    width: 300px;
+    text-align: center;
+    transition: box-shadow 0.3s ease; /* Transisi halus saat hover */
+}
+
+.container:hover {
+    box-shadow: 0 0 20px rgb(24, 98, 176), 0 0 30px rgba(40, 167, 69, 0.5); /* Efek glow saat hover */
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 85%;
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color:  #121371;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color:rgb(32, 222, 255);
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.burger-menu {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.burger-icon {
+    cursor: pointer;
+}
+
+.burger-icon span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff; /* Ubah warna burger menu */
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu.show {
+    display: block;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    margin-bottom: 10px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #333;
+}

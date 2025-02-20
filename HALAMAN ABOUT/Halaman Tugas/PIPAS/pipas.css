@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121371;
+    color: white;
+}
+
+.burger-menu {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.burger-icon {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.burger-icon span {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: white;
+    color: #121371;
+    width: 200px;
+    border-radius: 5px;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 10px;
+}
+
+.menu ul li {
+    padding: 10px;
+}
+
+.menu ul li a {
+    color: #121371;
+    text-decoration: none;
+}
+
+.menu ul li a:hover {
+    background-color: #3333ff;
+    color: white;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+}
+
+form, .content p {
+    color: #121371;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    margin-top: 20px;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #121371;
+}
+
+button {
+    font-size: 20px;
+    padding: 15px;
+    background-color: white;
+    color: #121371;
+    border: 1px solid #121371;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: #3333ff;
+    color: white;
+}
